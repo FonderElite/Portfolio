@@ -20,6 +20,1958 @@
     <link rel="stylesheet" href="Portfolio/index.css">
   <title>FonderElite</title>
   <style>
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #c7c7c7;
+}
+
+* {
+  font-family: "poppins";
+  color: #dfdddd;
+}
+
+@media screen and (min-width: 800px) {
+  /*Main div*/
+  #main-div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #c7c7c7;
+    z-index: 1;
+  }
+
+  #labelh1 {
+    background: #303030;
+    position: fixed;
+    width: 100%;
+    height: 14%;
+    color: white;
+    z-index: 999;
+  }
+
+  #lh1-0 {
+    position: absolute;
+  }
+
+  #lh1-1 {
+    position: absolute;
+  }
+
+  #lh1-2 {
+    position: absolute;
+  }
+
+  #lh1-3 {
+    position: absolute;
+  }
+
+  #lh1-4 {
+    position: absolute;
+  }
+
+  #lh1-5 {
+    position: absolute;
+  }
+
+  #lh1-1 {
+    color: #0ef535;
+  }
+
+  #lh1-2 {
+    left: 20.5%;
+  }
+
+  #lh1-3 {
+    left: 21%;
+    color: #1758ad;
+  }
+
+  #lh1-4 {
+    left: 22.4%;
+    color: #dfdfdf;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  #li1 {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+  }
+
+  #li2 {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+  }
+
+  #li3 {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+  }
+
+  #li4 {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+  }
+
+  #li5 {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+  }
+
+  .navlink {
+    position: absolute;
+    font-size: 3vh;
+    top: 33%;
+    color: #dbdbdb;
+  }
+  .navlink:hover {
+    color: #0ef535;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+
+  .navlink:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #dbdedf;
+    -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+
+  .navlink:hover:after {
+    width: 100%;
+    left: 0;
+    letter-spacing: 2px;
+  }
+
+  #a1 {
+    left: 60%;
+  }
+
+  #a2 {
+    left: 68%;
+  }
+
+  #a3 {
+    left: 80%;
+  }
+
+  #a4 {
+    left: 90%;
+  }
+
+  #write {
+    font-size: 4vh;
+    position: absolute;
+    top: -3%;
+    left: 25%;
+    color: #e9e9e9;
+  }
+
+  /*Avatar*/
+  #avatar {
+    position: absolute;
+    background-color: #272727;
+    -webkit-box-shadow: 0px 0px 5px 1px #494747;
+            box-shadow: 0px 0px 5px 1px #494747;
+    width: 50%;
+    height: 50%;
+    top: 16%;
+    left: 0.5%;
+  }
+
+  #avatarimg {
+    border-radius: 100px;
+    position: absolute;
+    width: 28%;
+    height: 50%;
+    top: 3%;
+    left: 1%;
+    border: 1px solid #6e6d6d;
+  }
+
+  #avatarh2 {
+    position: absolute;
+    top: 48%;
+    left: 4.5%;
+  }
+
+  #avatarp1 {
+    position: absolute;
+    top: 60%;
+  }
+
+  #avatarhtb {
+    position: absolute;
+    width: 30%;
+    height: 20%;
+    left: 67%;
+  }
+
+  #avatarthm {
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    left: 35%;
+    top: 2%;
+  }
+
+  #ibuilding {
+    position: absolute;
+    left: 2%;
+    color: #a7a5a5;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    top: 10%;
+    color: #ee954d;
+  }
+
+  #ilocation {
+    position: absolute;
+    left: 2%;
+    color: #a7a5a5;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    top: 35%;
+    color: #55a2eb;
+  }
+
+  #iname {
+    position: absolute;
+    left: 2%;
+    color: #a7a5a5;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    top: 65%;
+    color: #9bfa5b;
+  }
+
+  #pbuilding {
+    top: -10%;
+    position: absolute;
+    font-size: 2.2vh;
+    left: 10%;
+    color: #a8a8a8;
+  }
+  #pbuilding:hover {
+    color: #e0e0e0;
+  }
+
+  #plocation {
+    top: 15%;
+    position: absolute;
+    font-size: 2.2vh;
+    left: 10%;
+    color: #a8a8a8;
+  }
+  #plocation:hover {
+    color: #e0e0e0;
+  }
+
+  #pname {
+    top: 45%;
+    position: absolute;
+    font-size: 2.2vh;
+    left: 10%;
+    color: #a8a8a8;
+    left: 12%;
+  }
+  #pname:hover {
+    color: #e0e0e0;
+  }
+
+  #downinfo {
+    background-color: #181818;
+    position: absolute;
+    width: 30%;
+    height: 25%;
+    top: 74%;
+    border-radius: 10px;
+  }
+
+  /*Profiles*/
+  #profiles {
+    position: absolute;
+    width: 50%;
+    height: 70%;
+    background-color: #181818;
+    border-radius: 10px;
+    left: 35%;
+    top: 25%;
+  }
+
+  #profilesh2 {
+    position: absolute;
+    top: -10%;
+    left: 5%;
+  }
+
+  #codewars {
+    position: absolute;
+    width: 90%;
+    top: 20%;
+    left: 2%;
+  }
+
+  #thmprofile {
+    position: absolute;
+    width: 65%;
+    height: 25%;
+    top: 40%;
+    left: 2%;
+  }
+
+  #about-me {
+    position: absolute;
+    background-color: #272727;
+    -webkit-box-shadow: 0px 0px 5px 1px #494747;
+            box-shadow: 0px 0px 5px 1px #494747;
+    width: 47%;
+    height: 50%;
+    top: 16%;
+    left: 52%;
+  }
+
+  #icode {
+    position: absolute;
+    color: #e9542f;
+    font-size: 7vh;
+    top: 1.5%;
+    left: 1%;
+  }
+
+  #aboutmeh2 {
+    position: absolute;
+    left: 10%;
+    top: -2%;
+  }
+
+  #aboutmediv {
+    background: #181818;
+    position: absolute;
+    border-radius: 10px;
+    width: 90%;
+    height: 70%;
+    top: 20%;
+    left: 5%;
+  }
+
+  #languages {
+    background: #181818;
+    position: absolute;
+    border-radius: 10px;
+    width: 50%;
+    height: 30%;
+    top: 68%;
+    border-radius: 0px;
+    left: 0.5%;
+  }
+
+  #languagesh2 {
+    position: absolute;
+    left: 8%;
+    top: -5%;
+  }
+
+  #ilang {
+    color: #4fa1ff;
+    position: absolute;
+    left: -34%;
+    top: 5%;
+    font-size: 5vh;
+  }
+
+  #lang1 {
+    position: absolute;
+    top: 35%;
+    width: 9%;
+    height: 30%;
+  }
+
+  #lang2 {
+    position: absolute;
+    top: 35%;
+    width: 9%;
+    height: 30%;
+  }
+
+  #lang3 {
+    position: absolute;
+    top: 35%;
+    width: 9%;
+    height: 30%;
+  }
+
+  #lang4 {
+    position: absolute;
+    top: 35%;
+    width: 9%;
+    height: 30%;
+  }
+
+  #lang5 {
+    position: absolute;
+    top: 35%;
+    width: 9%;
+    height: 30%;
+  }
+
+  #lang6 {
+    position: absolute;
+    top: 35%;
+    width: 9%;
+    height: 30%;
+  }
+
+  #lang7 {
+    position: absolute;
+    top: 35%;
+    width: 9%;
+    height: 30%;
+  }
+
+  #lang8 {
+    position: absolute;
+    top: 35%;
+    width: 9%;
+    height: 30%;
+  }
+
+  #lang1 {
+    left: 0%;
+  }
+
+  #lang2 {
+    left: 12%;
+  }
+
+  #lang3 {
+    left: 25%;
+  }
+
+  #lang4 {
+    left: 37%;
+  }
+
+  #lang5 {
+    left: 50%;
+  }
+
+  #lang6 {
+    left: 64%;
+  }
+
+  #lang7 {
+    left: 75%;
+  }
+
+  #lang8 {
+    left: 88%;
+  }
+
+  #langp1 {
+    position: absolute;
+    top: 60%;
+  }
+
+  #langp2 {
+    position: absolute;
+    top: 60%;
+  }
+
+  #langp3 {
+    position: absolute;
+    top: 60%;
+  }
+
+  #langp4 {
+    position: absolute;
+    top: 60%;
+  }
+
+  #langp5 {
+    position: absolute;
+    top: 60%;
+  }
+
+  #langp6 {
+    position: absolute;
+    top: 60%;
+  }
+
+  #langp7 {
+    position: absolute;
+    top: 60%;
+  }
+
+  #langp8 {
+    position: absolute;
+    top: 60%;
+  }
+
+  #langp9 {
+    position: absolute;
+    top: 60%;
+  }
+
+  #langp1 {
+    left: 1.5%;
+  }
+
+  #langp2 {
+    left: 14%;
+  }
+
+  #langp3 {
+    left: 26%;
+  }
+
+  #langp4 {
+    left: 35%;
+  }
+
+  #langp5 {
+    left: 49%;
+  }
+
+  #langp6 {
+    left: 66%;
+  }
+
+  #langp7 {
+    left: 75%;
+  }
+
+  #langp8 {
+    left: 90.5%;
+  }
+
+  #tools {
+    background: #181818;
+    position: absolute;
+    border-radius: 10px;
+    width: 47%;
+    height: 30%;
+    top: 68%;
+    border-radius: 0px;
+    left: 52%;
+    position: absolute;
+  }
+
+  #iterminal {
+    font-size: 5vh;
+    position: absolute;
+    left: 1%;
+    top: 3%;
+  }
+
+  #toolsh2 {
+    position: absolute;
+    left: 7%;
+    top: -7%;
+  }
+
+  #tool1 {
+    position: absolute;
+    top: 32%;
+    width: 9%;
+    height: 30%;
+  }
+
+  #tool2 {
+    position: absolute;
+    top: 32%;
+    width: 9%;
+    height: 30%;
+  }
+
+  #tool3 {
+    position: absolute;
+    top: 32%;
+    width: 9%;
+    height: 30%;
+  }
+
+  #tool4 {
+    position: absolute;
+    top: 32%;
+    width: 9%;
+    height: 30%;
+  }
+
+  #tool5 {
+    position: absolute;
+    top: 32%;
+    width: 9%;
+    height: 30%;
+  }
+
+  #tool6 {
+    position: absolute;
+    top: 32%;
+    width: 9%;
+    height: 30%;
+  }
+
+  #tool7 {
+    position: absolute;
+    top: 32%;
+    width: 9%;
+    height: 30%;
+  }
+
+  #tool8 {
+    position: absolute;
+    top: 32%;
+    width: 9%;
+    height: 30%;
+  }
+
+  #tool9 {
+    position: absolute;
+    top: 32%;
+    width: 9%;
+    height: 30%;
+  }
+
+  #tool10 {
+    position: absolute;
+    top: 32%;
+    width: 9%;
+    height: 30%;
+  }
+
+  #tool1 {
+    left: 0%;
+  }
+
+  #tool2 {
+    left: 12%;
+  }
+
+  #tool3 {
+    left: 25%;
+  }
+
+  #tool4 {
+    left: 37%;
+  }
+
+  #tool5 {
+    left: 50%;
+  }
+
+  #tool6 {
+    left: 64%;
+  }
+
+  #tool7 {
+    left: 75%;
+  }
+
+  #tool8 {
+    left: 88%;
+  }
+
+  #toolp1 {
+    position: absolute;
+    top: 57%;
+  }
+
+  #toolp2 {
+    position: absolute;
+    top: 57%;
+  }
+
+  #toolp3 {
+    position: absolute;
+    top: 57%;
+  }
+
+  #toolp4 {
+    position: absolute;
+    top: 57%;
+  }
+
+  #toolp5 {
+    position: absolute;
+    top: 57%;
+  }
+
+  #toolp6 {
+    position: absolute;
+    top: 57%;
+  }
+
+  #toolp7 {
+    position: absolute;
+    top: 57%;
+  }
+
+  #toolp8 {
+    position: absolute;
+    top: 57%;
+  }
+
+  #toolp1 {
+    left: 1%;
+  }
+
+  #toolp2 {
+    left: 13%;
+  }
+
+  #toolp3 {
+    left: 28%;
+  }
+
+  #toolp4 {
+    left: 39%;
+  }
+
+  #toolp5 {
+    left: 49%;
+  }
+
+  #toolp6 {
+    left: 66%;
+  }
+
+  #toolp7 {
+    left: 75%;
+  }
+
+  #toolp8 {
+    left: 91%;
+  }
+
+  /*Information*/
+  #information {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #c7c7c7;
+    top: 85%;
+    height: 120%;
+  }
+
+  #ghinformation {
+    width: 50%;
+    height: 70%;
+    background: #202020;
+    position: absolute;
+    left: 0.5%;
+    top: 15%;
+  }
+
+  #ghinfoh2 {
+    position: absolute;
+    left: 39%;
+  }
+
+  #ghsvg1 {
+    position: absolute;
+    top: -20%;
+    left: -60%;
+  }
+
+  #githubprofile {
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    border-radius: 5px;
+    top: 14%;
+    border: 1px solid #464646;
+    left: 3%;
+  }
+
+  #circle {
+    position: absolute;
+    border-radius: 20px;
+    width: 2.5%;
+    height: 3%;
+    background: #6de02a;
+    top: 39%;
+    left: 29.5%;
+  }
+
+  #ghstats1 {
+    top: 14%;
+    left: 40%;
+    background: #0a0a0a;
+    position: absolute;
+    width: 50%;
+    height: 30%;
+  }
+
+  #ghstats2 {
+    background: #181818;
+    position: absolute;
+    border-radius: 10px;
+    position: absolute;
+    width: 93%;
+    height: 44%;
+    top: 50%;
+    left: 3%;
+    background: #0a0a0a;
+  }
+
+  #loginh2 {
+    font-size: 2.7vh;
+    position: absolute;
+    left: 5%;
+    color: #b1b1b1;
+    top: -5%;
+  }
+  #loginh2:hover {
+    color: #6de02a;
+  }
+
+  #idh2 {
+    font-size: 2.7vh;
+    position: absolute;
+    left: 5%;
+    color: #b1b1b1;
+    top: 15%;
+  }
+  #idh2:hover {
+    color: #6de02a;
+  }
+
+  #emailh2 {
+    font-size: 2.7vh;
+    position: absolute;
+    left: 5%;
+    color: #b1b1b1;
+    top: 32%;
+  }
+  #emailh2:hover {
+    color: #6de02a;
+  }
+
+  #hireh2 {
+    font-size: 2.7vh;
+    position: absolute;
+    left: 5%;
+    color: #b1b1b1;
+    top: 50%;
+  }
+  #hireh2:hover {
+    color: #6de02a;
+  }
+
+  #twitterh2 {
+    font-size: 2.7vh;
+    position: absolute;
+    left: 5%;
+    color: #b1b1b1;
+    top: 70%;
+  }
+  #twitterh2:hover {
+    color: #6de02a;
+  }
+
+  #companyh2 {
+    position: absolute;
+    left: 5%;
+    font-size: 3vh;
+    color: #b1b1b1;
+    left: 2%;
+    top: -5%;
+  }
+  #companyh2:hover {
+    color: #6de02a;
+  }
+
+  #blogh2 {
+    position: absolute;
+    left: 5%;
+    font-size: 3vh;
+    color: #b1b1b1;
+    left: 2%;
+    top: 15%;
+  }
+  #blogh2:hover {
+    color: #6de02a;
+  }
+
+  #locationh2 {
+    position: absolute;
+    left: 5%;
+    font-size: 3vh;
+    color: #b1b1b1;
+    left: 2%;
+    top: 22%;
+  }
+  #locationh2:hover {
+    color: #6de02a;
+  }
+
+  #publicrepoh2 {
+    position: absolute;
+    left: 5%;
+    font-size: 3vh;
+    color: #b1b1b1;
+    left: 2%;
+    top: 36%;
+  }
+  #publicrepoh2:hover {
+    color: #6de02a;
+  }
+
+  #publicgistsh2 {
+    position: absolute;
+    left: 5%;
+    font-size: 3vh;
+    color: #b1b1b1;
+    left: 2%;
+    top: 50%;
+  }
+  #publicgistsh2:hover {
+    color: #6de02a;
+  }
+
+  #followersh2 {
+    position: absolute;
+    left: 5%;
+    font-size: 3vh;
+    color: #b1b1b1;
+    left: 2%;
+    top: 63%;
+  }
+  #followersh2:hover {
+    color: #6de02a;
+  }
+
+  #followingh2 {
+    position: absolute;
+    left: 5%;
+    font-size: 3vh;
+    color: #b1b1b1;
+    left: 2%;
+    top: 76%;
+  }
+  #followingh2:hover {
+    color: #6de02a;
+  }
+
+  /*Projects*/
+  #vscodesvg1 {
+    position: absolute;
+    top: -20%;
+    left: -60%;
+  }
+
+  #projinformation {
+    width: 50%;
+    height: 70%;
+    background: #202020;
+    position: absolute;
+    left: 52%;
+    top: 15%;
+    width: 47%;
+  }
+
+  #projinfoh2 {
+    position: absolute;
+    left: 38%;
+  }
+
+  #proj1 {
+    position: absolute;
+    width: 40%;
+    height: 35%;
+    border-radius: 5px;
+    border: 1px solid #9e9e9e;
+    opacity: 0.7;
+    -webkit-filter: brightness(70%);
+            filter: brightness(70%);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    top: 15%;
+    left: 5%;
+    background: url("https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2019/06/bash_logo_1200x630-960x504.png");
+    background-size: 100% 90%;
+  }
+  #proj1:hover {
+    opacity: 1;
+    -webkit-filter: brightness(100%);
+            filter: brightness(100%);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+
+  #proj2 {
+    position: absolute;
+    width: 40%;
+    height: 35%;
+    border-radius: 5px;
+    border: 1px solid #9e9e9e;
+    opacity: 0.7;
+    -webkit-filter: brightness(70%);
+            filter: brightness(70%);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    top: 15%;
+    left: 53%;
+    background: url("https://cdn.shopify.com/s/files/1/2391/5185/articles/ULTIMATE_List_of_React_Blogs_and_Sites_that_Allow_Guest_Blogging_wallpaper_1600x.png?v=1564838086");
+    background-size: 100% 97%;
+  }
+  #proj2:hover {
+    opacity: 1;
+    -webkit-filter: brightness(100%);
+            filter: brightness(100%);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+
+  #mostused {
+    position: absolute;
+    top: 50%;
+    height: 50%;
+    width: 40%;
+    left: 5%;
+  }
+
+  #proj3 {
+    position: absolute;
+    width: 40%;
+    height: 35%;
+    border-radius: 5px;
+    border: 1px solid #9e9e9e;
+    opacity: 0.7;
+    -webkit-filter: brightness(70%);
+            filter: brightness(70%);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    top: 53%;
+    left: 53%;
+    height: 43%;
+    background: url("https://previews.123rf.com/images/denisxize/denisxize1706/denisxize170600492/81262459-isometric-location-map-with-map-points-on-white-background-vector.jpg");
+    background-size: 100% 100%;
+  }
+  #proj3:hover {
+    opacity: 1;
+    -webkit-filter: brightness(100%);
+            filter: brightness(100%);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+
+  #ghimgstats {
+    position: absolute;
+    top: 50%;
+    height: 50%;
+    width: 60%;
+    left: 50%;
+  }
+
+  #writeups {
+    position: absolute;
+    width: 100%;
+    height: 150%;
+    top: 95%;
+    background: #c7c7c7;
+  }
+
+  #writeupthm {
+    background: #1b1b1b;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    position: absolute;
+    top: 0%;
+  }
+
+  #thmh2 {
+    position: absolute;
+    font-size: 6vh;
+    top: 6%;
+    left: 35%;
+  }
+
+  #thmsvg1 {
+    width: 18%;
+    height: 10%;
+    position: absolute;
+    top: 8%;
+    left: 10%;
+  }
+
+  #sidethmsvg {
+    position: absolute;
+    width: 15%;
+    height: 15%;
+    top: 4%;
+    left: 70%;
+  }
+
+  #line1 {
+    position: absolute;
+    width: 40%;
+    height: 0.3%;
+    background: #e6e6e6;
+    border-radius: 10px;
+    top: 13.5%;
+    left: 30%;
+  }
+
+  #mainthm {
+    position: absolute;
+    background: #242424;
+    width: 90%;
+    height: 75%;
+    border-radius: 10px;
+    top: 20%;
+    left: 5%;
+  }
+
+  #room1 {
+    position: absolute;
+    width: 25%;
+    height: 25%;
+    background: #1b1d31;
+    border-radius: 5px;
+    border: 1px solid white;
+    background: url("https://tryhackme-images.s3.amazonaws.com/room-icons/4367aaaad69944075ce7ba8861b21564.png");
+    background-size: 100% 100%;
+  }
+
+  #room2 {
+    position: absolute;
+    width: 25%;
+    height: 25%;
+    background: #1b1d31;
+    border-radius: 5px;
+    border: 1px solid white;
+    background: url("https://tryhackme-images.s3.amazonaws.com/room-icons/4367aaaad69944075ce7ba8861b21564.png");
+    background-size: 100% 100%;
+  }
+
+  #room3 {
+    position: absolute;
+    width: 25%;
+    height: 25%;
+    background: #1b1d31;
+    border-radius: 5px;
+    border: 1px solid white;
+    background: url("https://tryhackme-images.s3.amazonaws.com/room-icons/4367aaaad69944075ce7ba8861b21564.png");
+    background-size: 100% 100%;
+  }
+
+  #room4 {
+    position: absolute;
+    width: 25%;
+    height: 25%;
+    background: #1b1d31;
+    border-radius: 5px;
+    border: 1px solid white;
+    background: url("https://tryhackme-images.s3.amazonaws.com/room-icons/4367aaaad69944075ce7ba8861b21564.png");
+    background-size: 100% 100%;
+  }
+
+  #room5 {
+    position: absolute;
+    width: 25%;
+    height: 25%;
+    background: #1b1d31;
+    border-radius: 5px;
+    border: 1px solid white;
+    background: url("https://tryhackme-images.s3.amazonaws.com/room-icons/4367aaaad69944075ce7ba8861b21564.png");
+    background-size: 100% 100%;
+  }
+
+  #room6 {
+    position: absolute;
+    width: 25%;
+    height: 25%;
+    background: #1b1d31;
+    border-radius: 5px;
+    border: 1px solid white;
+    background: url("https://tryhackme-images.s3.amazonaws.com/room-icons/4367aaaad69944075ce7ba8861b21564.png");
+    background-size: 100% 100%;
+  }
+
+  #room7 {
+    position: absolute;
+    width: 25%;
+    height: 25%;
+    background: #1b1d31;
+    border-radius: 5px;
+    border: 1px solid white;
+    background: url("https://tryhackme-images.s3.amazonaws.com/room-icons/4367aaaad69944075ce7ba8861b21564.png");
+    background-size: 100% 100%;
+  }
+
+  #room8 {
+    position: absolute;
+    width: 25%;
+    height: 25%;
+    background: #1b1d31;
+    border-radius: 5px;
+    border: 1px solid white;
+    background: url("https://tryhackme-images.s3.amazonaws.com/room-icons/4367aaaad69944075ce7ba8861b21564.png");
+    background-size: 100% 100%;
+  }
+
+  #room9 {
+    position: absolute;
+    width: 25%;
+    height: 25%;
+    background: #1b1d31;
+    border-radius: 5px;
+    border: 1px solid white;
+    background: url("https://tryhackme-images.s3.amazonaws.com/room-icons/4367aaaad69944075ce7ba8861b21564.png");
+    background-size: 100% 100%;
+  }
+
+  #room10 {
+    position: absolute;
+    width: 25%;
+    height: 25%;
+    background: #1b1d31;
+    border-radius: 5px;
+    border: 1px solid white;
+    background: url("https://tryhackme-images.s3.amazonaws.com/room-icons/4367aaaad69944075ce7ba8861b21564.png");
+    background-size: 100% 100%;
+  }
+
+  #room11 {
+    position: absolute;
+    width: 25%;
+    height: 25%;
+    background: #1b1d31;
+    border-radius: 5px;
+    border: 1px solid white;
+    background: url("https://tryhackme-images.s3.amazonaws.com/room-icons/4367aaaad69944075ce7ba8861b21564.png");
+    background-size: 100% 100%;
+  }
+
+  #room1 {
+    display: block;
+    top: 10%;
+    left: 5%;
+    background: url("https://miro.medium.com/max/1200/1*1mtQwkgfzGNK8xB5RxWY5A.jpeg");
+    background-size: 100% 100%;
+  }
+
+  #room2 {
+    display: block;
+    top: 10%;
+    left: 38%;
+    background: url("https://miro.medium.com/max/800/0*SEBQEcaEixFrmGHe.jpg");
+    background-size: 100% 100%;
+  }
+
+  #room3 {
+    display: block;
+    top: 10%;
+    left: 70%;
+    background: url("https://blog.tryhackme.com/content/images/size/w600/2019/12/thumb-1920-504947.jpg");
+    background-size: 100% 100%;
+  }
+
+  #room4 {
+    display: block;
+    top: 40%;
+    left: 5%;
+    background: url("https://www.syedlearns.co/wp-content/uploads/2021/01/OWASP-TOP-10.jpg");
+    background-size: 100% 100%;
+  }
+
+  #room5 {
+    display: block;
+    top: 40%;
+    left: 38%;
+    background: url("https://i.pinimg.com/736x/6a/5d/aa/6a5daad4635281500c9ebdb4388caec7.jpg");
+    background-size: 100% 100%;
+  }
+
+  #room6 {
+    display: block;
+    top: 40%;
+    left: 70%;
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNWME28Np4FEdIUtoskoEVGRNmIwXTruzP_g&usqp=CAU");
+    background-size: 100% 100%;
+  }
+
+  #room7 {
+    display: block;
+    top: 70%;
+    left: 5%;
+    background: url("https://2.bp.blogspot.com/-m2g7Jk853uA/WkUy9WLZsQI/AAAAAAABApE/WTOrDCKiaxYNhsint2Q7h9SHSynZ74t2wCLcBGAs/s1600/Frogs%2Bfor%2BBreakfast--Red%2BFox%252CBonnie%2BMarris.jpg");
+    background-size: 100% 100%;
+  }
+
+  #room8 {
+    display: block;
+    top: 70%;
+    left: 38%;
+    background: url("https://miro.medium.com/max/777/0*kJkE4WBRYFkAjADy.png");
+    background-size: 105% 100%;
+  }
+
+  #room9 {
+    display: block;
+    top: 70%;
+    left: 70%;
+    background: url("https://live.staticflickr.com/4099/4919659112_70f8836dfa.jpg");
+    background-size: 100% 100%;
+  }
+
+  #writeupsp {
+    position: absolute;
+    font-size: 2.5vh;
+    top: 2%;
+    left: 63%;
+  }
+
+  #awriteup {
+    color: #00e1ff;
+  }
+
+  .texthover {
+    background: black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.7;
+    display: block;
+  }
+
+  #text1 {
+    top: 35%;
+    position: absolute;
+    font-size: 6vh;
+  }
+
+  #text2 {
+    top: 35%;
+    position: absolute;
+    font-size: 6vh;
+  }
+
+  #text3 {
+    top: 35%;
+    position: absolute;
+    font-size: 6vh;
+  }
+
+  #text4 {
+    top: 35%;
+    position: absolute;
+    font-size: 6vh;
+  }
+
+  #text5 {
+    top: 35%;
+    position: absolute;
+    font-size: 6vh;
+  }
+
+  #text6 {
+    top: 35%;
+    position: absolute;
+    font-size: 6vh;
+  }
+
+  #text7 {
+    top: 35%;
+    position: absolute;
+    font-size: 6vh;
+  }
+
+  #text8 {
+    top: 35%;
+    position: absolute;
+    font-size: 6vh;
+  }
+
+  #text9 {
+    top: 35%;
+    position: absolute;
+    font-size: 6vh;
+  }
+
+  #text10 {
+    top: 35%;
+    position: absolute;
+    font-size: 6vh;
+  }
+
+  #text1 {
+    left: 2%;
+  }
+
+  #text2 {
+    left: 20%;
+  }
+
+  #text3 {
+    left: 25%;
+  }
+
+  #text4 {
+    left: 30%;
+  }
+
+  #text5 {
+    left: 25%;
+  }
+
+  #text6 {
+    left: 30%;
+  }
+
+  #text7 {
+    left: 30%;
+  }
+
+  #text8 {
+    left: 24%;
+  }
+
+  #text9 {
+    left: 32%;
+  }
+
+  #writeuphtb {
+    background: #1b1b1b;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    position: absolute;
+    top: 105%;
+  }
+
+  #htbsvg1 {
+    position: absolute;
+    top: 6%;
+    left: 2%;
+    width: 25%;
+    height: 10%;
+  }
+}
+#htbh2 {
+  position: absolute;
+  font-size: 6vh;
+  top: 5%;
+  left: 35%;
+}
+
+#line2 {
+  background: white;
+  position: absolute;
+  width: 40%;
+  height: 0.3%;
+  top: 12.5%;
+  left: 30%;
+  border-radius: 10px;
+}
+
+#writeupsp2 {
+  position: absolute;
+  font-size: 2.5vh;
+  top: 2%;
+  left: 63%;
+}
+
+#mainhtb {
+  position: absolute;
+  background: #242424;
+  width: 90%;
+  height: 75%;
+  border-radius: 10px;
+  top: 20%;
+  left: 5%;
+}
+
+#htbroom1 {
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  background: #1b1d31;
+  border-radius: 5px;
+  border: 1px solid white;
+  background: url("https://tryhackme-images.s3.amazonaws.com/room-icons/4367aaaad69944075ce7ba8861b21564.png");
+  background-size: 100% 100%;
+}
+
+#htbroom2 {
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  background: #1b1d31;
+  border-radius: 5px;
+  border: 1px solid white;
+  background: url("https://tryhackme-images.s3.amazonaws.com/room-icons/4367aaaad69944075ce7ba8861b21564.png");
+  background-size: 100% 100%;
+}
+
+#htbroom3 {
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  background: #1b1d31;
+  border-radius: 5px;
+  border: 1px solid white;
+  background: url("https://tryhackme-images.s3.amazonaws.com/room-icons/4367aaaad69944075ce7ba8861b21564.png");
+  background-size: 100% 100%;
+}
+
+#htbroom4 {
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  background: #1b1d31;
+  border-radius: 5px;
+  border: 1px solid white;
+  background: url("https://tryhackme-images.s3.amazonaws.com/room-icons/4367aaaad69944075ce7ba8861b21564.png");
+  background-size: 100% 100%;
+}
+
+#htbroom5 {
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  background: #1b1d31;
+  border-radius: 5px;
+  border: 1px solid white;
+  background: url("https://tryhackme-images.s3.amazonaws.com/room-icons/4367aaaad69944075ce7ba8861b21564.png");
+  background-size: 100% 100%;
+}
+
+#htbroom6 {
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  background: #1b1d31;
+  border-radius: 5px;
+  border: 1px solid white;
+  background: url("https://tryhackme-images.s3.amazonaws.com/room-icons/4367aaaad69944075ce7ba8861b21564.png");
+  background-size: 100% 100%;
+}
+
+#htbroom7 {
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  background: #1b1d31;
+  border-radius: 5px;
+  border: 1px solid white;
+  background: url("https://tryhackme-images.s3.amazonaws.com/room-icons/4367aaaad69944075ce7ba8861b21564.png");
+  background-size: 100% 100%;
+}
+
+#htbroom8 {
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  background: #1b1d31;
+  border-radius: 5px;
+  border: 1px solid white;
+  background: url("https://tryhackme-images.s3.amazonaws.com/room-icons/4367aaaad69944075ce7ba8861b21564.png");
+  background-size: 100% 100%;
+}
+
+#htbroom9 {
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  background: #1b1d31;
+  border-radius: 5px;
+  border: 1px solid white;
+  background: url("https://tryhackme-images.s3.amazonaws.com/room-icons/4367aaaad69944075ce7ba8861b21564.png");
+  background-size: 100% 100%;
+}
+
+#htbroom10 {
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  background: #1b1d31;
+  border-radius: 5px;
+  border: 1px solid white;
+  background: url("https://tryhackme-images.s3.amazonaws.com/room-icons/4367aaaad69944075ce7ba8861b21564.png");
+  background-size: 100% 100%;
+}
+
+#htbroom11 {
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  background: #1b1d31;
+  border-radius: 5px;
+  border: 1px solid white;
+  background: url("https://tryhackme-images.s3.amazonaws.com/room-icons/4367aaaad69944075ce7ba8861b21564.png");
+  background-size: 100% 100%;
+}
+
+#htbroom1 {
+  display: block;
+  top: 10%;
+  left: 5%;
+  background: url("https://res.cloudinary.com/limbernie/image/upload/f_auto,q_auto/img/doctor-htb-walkthrough.png");
+  background-size: 100% 100%;
+}
+
+#htbroom2 {
+  display: block;
+  top: 10%;
+  left: 38%;
+  background: url("https://i2.wp.com/binsec.nl/wp-content/uploads/2020/02/hackthebox-sauna-machine-info.png?fit=598%2C384&ssl=1");
+  background-size: 100% 100%;
+}
+
+#htbroom3 {
+  display: block;
+  top: 10%;
+  left: 70%;
+  background: url("https://ryankozak.com/wp-content/uploads/2019/07/swagshop/badge.png");
+  background-size: 100% 100%;
+}
+
+#htbroom4 {
+  display: block;
+  top: 40%;
+  left: 5%;
+  background: url("https://0xrick.github.io/images/hackthebox/waldo/0.png");
+  background-size: 100% 100%;
+}
+
+#htbroom5 {
+  display: block;
+  top: 40%;
+  left: 38%;
+  background: url("https://khaoticdev.net/wp-content/uploads/2019/10/banner-1.png");
+  background-size: 100% 100%;
+}
+
+#htbroom6 {
+  display: block;
+  top: 40%;
+  left: 70%;
+  background: url("https://snowscan.io/assets/images/htb-writeup-carrier/carrier_logo.png");
+  background-size: 100% 100%;
+}
+
+#htbroom7 {
+  display: block;
+  top: 70%;
+  left: 5%;
+  background: url("https://miro.medium.com/max/1838/1*633UxfTXxWLO9EFLispiug.jpeg");
+  background-size: 100% 100%;
+}
+
+#htbroom8 {
+  display: block;
+  top: 70%;
+  left: 38%;
+  background: url("https://0xrick.github.io/images/hackthebox/player/0.png");
+  background-size: 105% 100%;
+}
+
+#htbroom9 {
+  display: block;
+  top: 70%;
+  left: 70%;
+  background: url("https://pbs.twimg.com/media/EB9SRghWwAMOLMd.png");
+  background-size: 100% 100%;
+}
+
+#htbtext1 {
+  top: 35%;
+  position: absolute;
+  font-size: 6vh;
+}
+
+#htbtext2 {
+  top: 35%;
+  position: absolute;
+  font-size: 6vh;
+}
+
+#htbtext3 {
+  top: 35%;
+  position: absolute;
+  font-size: 6vh;
+}
+
+#htbtext4 {
+  top: 35%;
+  position: absolute;
+  font-size: 6vh;
+}
+
+#htbtext5 {
+  top: 35%;
+  position: absolute;
+  font-size: 6vh;
+}
+
+#htbtext6 {
+  top: 35%;
+  position: absolute;
+  font-size: 6vh;
+}
+
+#htbtext7 {
+  top: 35%;
+  position: absolute;
+  font-size: 6vh;
+}
+
+#htbtext8 {
+  top: 35%;
+  position: absolute;
+  font-size: 6vh;
+}
+
+#htbtext9 {
+  top: 35%;
+  position: absolute;
+  font-size: 6vh;
+}
+
+#htbtext10 {
+  top: 35%;
+  position: absolute;
+  font-size: 6vh;
+}
+
+#htbtext1 {
+  left: 25%;
+}
+
+#htbtext2 {
+  left: 24%;
+}
+
+#htbtext3 {
+  left: 18%;
+}
+
+#htbtext4 {
+  left: 30%;
+}
+
+#htbtext5 {
+  left: 25%;
+}
+
+#htbtext6 {
+  left: 34%;
+}
+
+#htbtext7 {
+  left: 30%;
+}
+
+#htbtext8 {
+  left: 26%;
+}
+
+#htbtext9 {
+  left: 20%;
+}
+
+#sidehtbsvg {
+  position: absolute;
+  left: 75%;
+}
+
+/*Contacts*/
+#contacts {
+  background: #1d1d1d;
+  position: absolute;
+  top: 410%;
+  width: 100%;
+  height: 80%;
+}
+
+#firstcdiv {
+  position: absolute;
+  width: 50%;
+  height: 40%;
+  left: 1%;
+  top: 5%;
+  border-radius: 5px;
+  background-color: #141414;
+}
+
+#con1 {
+  width: 18%;
+  height: 13%;
+  position: absolute;
+  top: 45%;
+  left: 1%;
+}
+
+#con2 {
+  width: 18%;
+  height: 13%;
+  position: absolute;
+  top: 45%;
+  left: 25%;
+}
+
+#con3 {
+  width: 18%;
+  height: 13%;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+}
+
+#con4 {
+  width: 18%;
+  height: 13%;
+  position: absolute;
+  top: 45%;
+  left: 1%;
+  top: 75%;
+}
+
+#con5 {
+  width: 18%;
+  height: 13%;
+  position: absolute;
+  top: 45%;
+  left: 75%;
+  width: 20%;
+}
+
+#h2c {
+  font-size: 4vh;
+  position: absolute;
+  left: 20%;
+}
+
+#bugbounty {
+  background: #141414;
+  position: absolute;
+  width: 50%;
+  height: 40%;
+  left: 1%;
+  top: 47%;
+}
+
+#bbh2 {
+  font-size: 4vh;
+  position: absolute;
+  left: 29%;
+}
+
+#b1 {
+  position: absolute;
+  width: 50%;
+  height: 25%;
+  left: 23%;
+  height: 70%;
+  top: 35%;
+}
+
+#b2 {
+  position: absolute;
+  width: 50%;
+  height: 25%;
+  left: 23%;
+  top: 30%;
+}
+
+#rightsp {
+  position: absolute;
+  left: 40%;
+  top: 88%;
+  background-color: #161616;
+  border-radius: 10px;
+}
+
+#keywords {
+  background: #141414;
+  background: #141414;
+  position: absolute;
+  width: 45%;
+  height: 40%;
+  left: 52%;
+  top: 5%;
+}
+#trophy{
+position: absolute;
+width: 15%;
+height:20%;
+top:3%;
+left: 21%;
+}
+#certh2{
+position: absolute;
+left: 33%;
+top: -1%;
+}
+#x1{
+color: #ff3232;
+}
+#x2{
+color: #ff3232;
+}
+#x3{
+color: #ff3232;
+}
+#x4{
+color:#ff3232;
+}
+#x5{
+color:#ff3232;
+}
+#certificates{
+width: 40%;
+height: 60%;
+position: absolute;
+font-size: 3vh;
+background:black;
+border-radius:5px;
+top: 30%;
+left: 2%;
+}
+
+#keywords2 {
+  background: #141414;
+  background: #141414;
+  position: absolute;
+  width: 45%;
+  height: 40%;
+  left: 52%;
+  top: 47%;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}/*# sourceMappingURL=index.css.map */
+
   </style>
 </head>
 
@@ -240,7 +2192,14 @@ I have experience with JavaScript, Python and C++. Im also quite good at bash sc
   <img id="b2" src="https://www.hackerone.com/sites/default/files/2017-06/hackerone_logo_white.png">
 </div>
 <div id="keywords" data-aos="fade-right">
-  
+<img id="trophy" src="https://s.w.org/images/core/emoji/13.0.1/svg/1f3c6.svg">
+<h2 id="certh2">Certifications</h2>
+<div id="certificates">
+<i id="x1"class="fa fa-times"></i><a id="cert1" href="#">Ejpt: Not Certified</a><br>
+<i id="x2" class="fa fa-times"></i><a id="cert2"href="#">Pentest+: Not Certified</a><br>
+<i id="x3"class="fa fa-times"></i><a id="cert3"href="#">Ecppt: Not Certified</a><br>
+<i id="x4"class="fa fa-times"></i><a id="cert4"href="#">OSCP: Not Certified</a><br>
+</div>
 </div>
 <div id="keywords2"  data-aos="fade-right">
   
