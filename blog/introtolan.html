@@ -1,0 +1,883 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>TryHackMe Intro To LAN</title>
+      <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="/run/live/persistence/sdb3/rw/home/user/THM/blog/introtolan/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+ <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<style>
+     @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+    @media(min-width: 800px){
+        *{
+            color: white;
+            font-family: 'Poppins';
+         
+        }
+body{
+    background-color: rgb(182, 182, 182);
+}
+#header{
+    position: absolute;
+    background-color: rgb(37, 37, 37);
+    width:100%;
+    height:16%;
+}
+#navbar{
+    width: 100%;
+    position: absolute;
+    height: 20%;
+}
+
+ul{
+position: absolute;
+list-style-type: none;
+left: 50%;
+width: 50%;
+height: 100%;
+}
+li{
+    text-decoration: none;
+}
+#li1{
+position: absolute;
+left: 20%;
+top: 170%;
+}
+#li2{
+position: absolute;
+left: 45%;
+top: 170%;
+}
+#li3{
+position: absolute;
+left: 73%;
+top: 170%;
+}
+a{
+    text-decoration: none;
+    position: absolute;
+    font-size: 4vh;
+    top: 0%;
+    color: rgb(207, 207, 207);
+    transition: 1s;
+}
+a:hover{
+    color:white;
+}
+a:before,
+a:after {
+  border: 0 solid transparent;
+  transition: all 0.3s;
+  content: '';
+  height: 0;
+  position: absolute;
+  width: 24px;
+}
+
+a:before {
+  right: 0;
+  top: -4px;
+}
+
+a:after {
+  bottom: -4px;
+  left: 0;
+}
+
+a:hover:before,
+a:hover:after {
+    
+  border-bottom: 2px solid #c2c2c2;
+  width: 100%;
+}
+#thmlogo{
+position: absolute;
+width: 15%;
+height: 400%;
+left: 2%;
+}
+#main{
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    top: 20%;
+    background-color: rgb(37, 37, 37);
+}
+#lansvg{
+    position: absolute;
+  width: 10%;
+    height: 16%;
+    left: 15%;
+}
+#lanh2{
+    position: absolute;
+    top: 4%;
+    left:0.5%;
+}
+#intro{
+    background-color: rgb(15, 15, 15);
+    width: 98%;
+    height: 80%;
+    position: absolute;
+    top: 18%;
+    left:1%;
+}
+#introh5{
+    position: absolute;
+    top: 2.5%;
+    left:8%;
+}
+#introdiv1{
+    position: absolute;
+    width:50%;
+    height: 80%;
+    top: 20%;
+    background-color: black;
+    height: 50%;
+}
+#introdiv1p{
+    position:absolute;
+    width: 75%;
+    text-align: center;
+    left:6%;
+    top: 10%;
+
+}
+#avatar{
+    position: absolute;
+    width: 7%;
+    height: 20%;
+    top:73%;
+    left:2%;
+    border-radius: 50%;
+    
+}
+#avatarh5{
+    position: absolute;
+    left: 10%;
+    top: 80%;
+}
+#quote{
+    font-size: 2vh;
+    top: 88%;
+    left:10%;
+    position: absolute;
+}
+#hackingos{
+  
+    background-color: black;
+    width: 18%;
+    height:10%;
+    position: absolute;
+    top: 75%;
+    left: 28%;
+}
+.os{
+position: absolute;
+}
+#os1{
+    width: 25%;
+height: 120%
+}
+#os2{
+    top:-12%;
+    left: 29%;
+}
+#os3{
+    width: 20%;
+    height: 115%;
+    left: 50%;
+    top:-12%;
+}
+#os4{
+    left: 77%;
+    top:-12%
+}
+#topologies{
+    position: absolute;
+    width: 48%;
+    height:80%;
+    background-color: black;
+    top: 20%;
+    left: 51%;
+}
+#topologyh5{
+    position: absolute;
+    top: 2%;
+    left:67%;
+}
+#starh6{
+    left:2%;
+    position: absolute;
+}
+#starimg{
+    position: absolute;
+    width: 20%;
+    height:25%;
+    left:2%;
+    top:15%;
+}
+#bush6{
+    position: absolute;
+    left:40.5%;
+}
+#busimg{
+    position: absolute;
+    width: 20%;
+    height:25%;
+    left:40%;
+    top:15%;
+}
+#ringh6{
+    position: absolute;
+    left:75.5%;
+}
+#ringimg{
+      position: absolute;
+    width: 20%;
+    height:25%;
+    left:75%;
+    top:15%;
+}
+#starp{
+    position: absolute;
+    font-size: 2vh;
+    width:30%;
+    text-align: center;
+    top: 45%;
+    left:-1%;
+  
+}
+#busp{
+ position: absolute;
+    font-size: 2vh;
+    width:30%;
+    text-align: center;
+    top: 45%;
+    left:35.5%;
+  
+}
+#ringp{
+     position: absolute;
+    font-size: 2vh;
+    width:30%;
+    text-align: center;
+    top: 45%;
+    left:70%;
+ 
+}
+#wifipng{
+    position:absolute;
+    left: 90%;
+    height: 20%;
+    width: 7%;
+    top: -1%;
+}
+/*Second Div*/
+#content{
+    position: absolute;
+    background-color: rgb(29, 29, 29);
+    width:100%;
+    height:80%;
+    top:105%;
+}
+#contenth2{
+    position: absolute;
+    top: 5%;
+    left:1%;
+}
+#contentpng{
+    position: absolute;
+    width:7%;
+    height:15%;
+    left: 25%;
+    top:1%;
+
+}
+.netdev{
+    position: absolute;
+    width: 30%;
+    height:50%;
+    border:1px solid white;
+    border-radius: 10px;
+ top: 25%;
+ background-color: black;
+ 
+    
+}
+#router{
+    left:1%;
+    display: block;
+    background: url('https://thumbs.gfycat.com/ImpressiveFearfulIrishredandwhitesetter-max-1mb.gif');
+    background-size: 100% 100%;
+    transition: 0.5s;
+}
+#text1{
+    display: none;
+    transition: 0.5s;
+    background: rgb(0, 0, 0);
+    width:100%;
+    height:100%;
+    opacity: 0.5;
+}
+#router:hover #text1{
+    display:block;
+  position: absolute;
+  transition: 0.5s;
+  cursor: pointer;
+}
+#routerh3{
+    position: absolute;
+    font-size: 7vh;
+    left:31%;
+    top:35%;
+    opacity:1;
+}
+#hub{
+   left:35%;
+     background: url('https://thumbs.gfycat.com/PastelFittingAmericanindianhorse-size_restricted.gif');
+    background-size: 100% 100%;
+}
+#text2{
+    display: none;
+    transition: 0.5s;
+    background: rgb(0, 0, 0);
+    width:100%;
+    height:100%;
+    opacity: 0.5;
+}
+#hub:hover #text2{
+    display:block;
+  position: absolute;
+  transition: 0.5s;
+  cursor: pointer;
+}
+#hubh3{
+    position: absolute;
+    font-size: 7vh;
+    left:38%;
+    top:35%;
+    opacity:1;
+}
+#switch{
+    left:69%;
+       background: url('https://thumbs.gfycat.com/ShockingBlackIchthyosaurs-max-1mb.gif');
+    background-size: 100% 100%;
+}
+
+#switch:hover #text3{
+    display:block;
+  position: absolute;
+  transition: 0.5s;
+  cursor: pointer;
+}
+#text3{
+    display: none;
+    transition: 0.5s;
+    background: rgb(0, 0, 0);
+    width:100%;
+    height:100%;
+    opacity: 0.5;
+}
+#switchh3{
+    position: absolute;
+    font-size: 7vh;
+    left:32%;
+    top:35%;
+    opacity:1;
+}
+#routerp{
+    position: absolute;
+    width: 25%;
+    background-color: rgb(15, 15, 15);
+    top: 80%;
+    font-size: 2vh;
+    left:2.4%;
+    text-align: center;
+}
+#hubp{
+    position: absolute;
+    width: 25%;
+    background-color: rgb(15, 15, 15);
+    top: 80%;
+    font-size: 2vh;
+    left:37%;
+    text-align: center;
+}
+#switchp{
+       position: absolute;
+    width: 25%;
+    background-color: rgb(15, 15, 15);
+    top: 80%;
+    font-size: 2vh;
+    left:71%;
+    text-align: center;
+}
+.netp{
+    border-radius: 5px;
+}
+/*End of content div*/
+
+#content2{
+    position: absolute;
+    width:100%;
+    height:100%;
+    background-color: rgb(26, 26, 26);
+    top: 190%;
+}
+#subneth2{
+position: absolute;
+top:5%;
+left:1%;
+}
+#subnetimg{
+    position:absolute;
+    width: 6%;
+    height:12%;
+    left: 29%;
+    top:3%;
+
+}
+#subnetinfo{
+    position: absolute;
+width: 95%;
+height: 50%;
+top:19%;
+left:2%;
+background: rgb(19, 19, 19);
+}
+#subnetp1{
+    position: absolute;
+    font-size: 2vh;
+}
+#subnetlist1{
+     font-size: 2vh;
+     width: 80%;
+     position: absolute;
+     left:1%;
+     top:2.5%;
+}
+#subnetex{
+    position: absolute;
+}
+#subneteximg{
+    position: absolute;
+    width:30%;
+    height:70%;
+    top: 28%;
+    left:1%;
+    border-radius: 5px;
+}
+#subnetp2{
+      font-size: 2vh;
+     width: 80%;
+     position: absolute;
+     left:32%;
+     top:30%;
+    
+}
+#ipaimg{
+    position: absolute;
+    width: 25%;
+    height: 40%;
+    top: 57%;
+    left: 32%;
+    border-radius: 5px;
+}
+#subnetp3{
+    font-size: 2vh;
+    position: absolute;
+    top:67%;
+    width:30%;
+    left: 58%;
+}
+/*Table*/
+table {
+  border-collapse: collapse;
+  width: 96%;
+  position: absolute;
+  top: 75%;
+  left: 1%;
+  z-index: 1;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #0b4d74;
+}
+#tablediv{
+    position: absolute;
+    background-color: rgb(22, 22, 22);
+    width: 100%;
+    height:35%;
+    top: 290%;
+}
+
+/*Table End*/
+#arp{
+position: absolute;
+width: 100%;
+height:80%;
+background-color: rgb(26, 25, 25);
+top: 330%;
+}
+#arph2{
+    position: absolute;
+    top:5%;
+    left:1%;
+}
+#arpimg{
+    position: absolute;
+    width:15%;
+    height:20%;
+    left: 32%;
+}
+#arpinfo{
+    position:absolute;
+    background-color: rgb(10, 10, 10);
+    width: 97%;
+    height: 70%;
+    top:25%;
+    left:1.5%;
+}
+#arpinfop{
+    position: absolute;
+    font-size: 2vh;
+}
+#arpli1{
+    position: absolute;
+    font-size: 2.1vh;
+    top:1.5%;
+    left:1%;
+}
+#arpli2{
+     position: absolute;
+    font-size: 2.1vh;
+    top:14%;
+    left:1%;
+}
+#arpli3{
+     position: absolute;
+    font-size: 2.1vh;
+    top:26%;
+    left:-0.5%;
+    text-align: center;
+}
+#arph5{
+    position:absolute;
+    top: 38%;
+    left:1%;
+    
+}
+#arpinfop4{
+    position:absolute;
+    font-size: 2.1vh;
+    top:45%;
+    left:1%;
+    width:50%;
+    }
+
+#arpol{
+    position: absolute;
+    font-size: 2.1vh;
+    top: 68%;
+}
+#arpinfop5{
+    position: absolute;
+    top: 60%;
+    left:1%;
+}
+#arpsvg{
+    position: absolute;
+    top: 38%;
+    left:78%;
+    width:20%;
+    height: 60%;
+    border-radius: 5px;
+}
+#dhcp{
+    position: absolute;
+    width: 100%;
+    height: 55%;
+    background-color: rgb(20, 20, 20);
+    top: 415%;
+}
+#dhcph2{
+    position: absolute;
+    top: 3%;
+    left:1.5%;
+}
+#dhcpinfo{
+    position:absolute;
+    background-color: rgb(15, 15, 15);
+    width: 97%;
+    height:73%;
+    left:1%;
+    top:24%;
+}
+#dhcpimg{
+    position: absolute;
+    width: 7%;
+    height:20%;
+    left: 45%;
+}
+#dhcpli1{
+    position: absolute;
+    width: 80%;
+    font-size: 2.1vh;
+    left:1.5%;
+}
+#dhcpli2{
+  position: absolute;
+    width: 80%;
+    font-size: 2.1vh;
+    left:1.5%;
+    top: 28%;
+}
+#dhcpli3{
+    position: absolute;
+    width: 80%;
+    font-size: 2.1vh;
+    left:1.5%;
+    top: 50%;
+}
+#dhcpimg-side{
+    position: absolute;
+    left:83%;
+    height:90%;
+    width: 15%;
+    
+}
+html, body {
+  height: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  left:1%;
+  overflow-x: hidden;
+}
+
+
+
+    } 
+</style>
+    </head>
+
+    <body>
+<div id="header">
+    <div id="navbar">
+        <nav>
+            
+                <img id="thmlogo" src="https://assets.tryhackme.com/img/logo/THMlogo-gray_scale.png">
+            <ul>
+                <li id="li1"><a id="a1" href="https://fonderelite.github.io">MainPage</a></li>
+                <li id="li2"><a id="a2" href="https://tryhackme/com/room/introtolan">TryHackMe</a></li>
+                <li id="li3"><a id="a3" href="https://github.com/fonderelite">Github</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<div id="main">
+    <div id="title">
+        <img id="lansvg" src="https://cdn.iconscout.com/icon/free/png-512/lan-connection-2159494-1814555.png">
+<h2 id="lanh2">Intro To LAN</h2>
+<img id="wifipng"src="https://www.freepnglogos.com/uploads/logo-wifi-png/logo-wifi-bluetooth-qual-diferen-leia-mais-sobre-26.png">
+    </div>
+    <div id="intro">
+<h5 id="introh5">Local Area Network (LAN) Topologies</h5>
+<div id="introdiv1">
+<p id="introdiv1p">
+    Over the years, there has been experimentation and implementation of various network designs.  In reference to networking, when we refer to the term "topology", <br>we are actually referring to the design or look of the network at hand. Let's discuss some information about of these networking topologies.
+</p>
+</div>
+<div id="creator">
+    <img id="avatar" src="https://avatars.githubusercontent.com/u/71190959?v=4">
+<h5 id="avatarh5">Made by FonderElite</h5>
+<div id="hackingos">
+ <img id="os1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Kali_Linux_2.0_wordmark.svg/1280px-Kali_Linux_2.0_wordmark.svg.png" class="os">
+  <img id="os2"src="https://camo.githubusercontent.com/c2227fb567d98372278e405255bf391ddd524a785382b42aedd0e25027294717/68747470733a2f2f696d672e69636f6e73382e636f6d2f706c6173746963696e652f34382f3030303030302f706172726f742e706e67" class="os">
+  <img id="os3"src="https://camo.githubusercontent.com/d493542b4bf441bcd7cbaa220d12a16196e5c9e94c2a0c5dc110135c5c65b837/68747470733a2f2f696d672e69636f6e73382e636f6d2f636f6c6f722f34382f3030303030302f7562756e74752e706e67" class="os">
+  <img id="os4"src="https://camo.githubusercontent.com/e732820e4e53eb0112429ffb6b87e5e123844b6174890c10aadf2f88fe4c17f4/68747470733a2f2f696d672e69636f6e73382e636f6d2f666c75656e742f34382f3030303030302f77696e646f77732d31302e706e67" class="os">
+</div>
+<p id="quote">"Technology is a subset of magic, it's mysterious and beautiful at the same time."</p>
+ <!--Creator Div end-->
+</div>
+<h5 id="topologyh5">Network Topologies</h5>
+<div id="topologies">
+<div id="star">
+    <h6 id="starh6">Star Topology</h6>
+    <img id="starimg" src="https://assets.tryhackme.com/additional/networking-fundamentals/intro-to-lan/star.png">
+    <p id="starp">
+The main premise of a star topology is that devices are individually connected via a central networking device such as a switch or hub. This topology is the most commonly found today because of its reliability and scalability - despite the cost.
+    </p>
+</div>
+<div id="bus">
+    <h6 id="bush6">Bus Topology</h6>
+    <img id="busimg" src="https://assets.tryhackme.com/additional/networking-fundamentals/intro-to-lan/bus.png">
+    <p id="busp">
+        This type of connection relies upon a single connection which is known as a backbone cable. This type of topology is similar to the leaf off of a tree in the sense that devices (leaves) stem from where the branches are on this cable.
+    </p>
+</div>
+<div id="ring">
+    <h6 id="ringh6">Ring Topology</h6>
+    <img id="ringimg" src="https://assets.tryhackme.com/additional/networking-fundamentals/intro-to-lan/ring.png">
+    <p id="ringp">
+ The ring topology is a topology for LAN in which all nodes in individually connected to a central point.<br> Like a hub, or switch. If a single cable malfunctions, the whole ring network topology will be shutdown.
+    </p>
+</div>
+</div>
+<!--Topologies Div End-->
+    </div>
+<!--Intro Div End-->
+</div>
+<div id="content">
+<div id="content-title">
+<h2 id="contenth2">Networking Devices</h2>
+<img id="contentpng" src="https://www.transparentpng.com/thumb/networking/networking-free-cut-out-11.png">
+<div id="router" class="netdev" data-aos="fade-right">
+    <div id="text1"><h3 id="routerh3">Router</h3></div>
+</div>
+<div id="routerinfo">
+    <p id="routerp" class="netp">
+        Routers connect computers and other devices to the Internet. A router acts as a dispatcher, choosing the best route for your information to travel. 
+    </p>
+</div>
+<div id="hub" class="netdev" data-aos="zoom-in">
+  <div id="text2"><h3 id="hubh3">Hub</h3></div>
+</div>
+<div id="hubinfo">
+    <p id="hubp" class="netp">
+     A hub connects multiple wires coming from different branches, for example, the connector in star topology which connects different stations. 
+    </p>
+</div>
+<div id="switch" class="netdev" data-aos="fade-left">
+  <div id="text3"><h3 id="switchh3">Switch</h3></div>
+</div>
+<div id="switchinfo">
+    <p id="switchp" class="netp">
+        A network switch is networking hardware that connects devices on a computer network by using packet switching to receive and forward data to the destination device. 
+    </p>
+
+</div>
+</div>
+</div>
+<div id="content2">
+<h2 id="subneth2">
+    A primer on subnetting
+</h2>
+<img id="subnetimg" src="https://image.flaticon.com/icons/png/128/1239/1239682.png">
+<div id="subnetinfo" data-aos="flip-up">
+<p id="subnetp1"><li id="subnetlist1">As we've previously discussed throughout the module so far, Networks can be found in all shapes and sizes - ranging from small to large. Subnetting is the term given to splitting up a network into smaller, <br>miniature networks within itself. Think of it as slicing up a cake for your friends. There's only a certain amount of cake to go around, but everybody wants a piece. Subnetting is you deciding who gets what slice & reserving such a slice of this metaphorical cake.</li></p>
+<img id="subneteximg"src="https://assets.tryhackme.com/additional/networking-fundamentals/intro-to-lan/subnet22.png">
+<p id="subnetp2">Whilst you know where to send information in real life to the correct department, <br>networks need to know as well. Network administrators use subnetting to categorise and assign specific parts of a network to reflect this.<br>
+Subnetting is achieved by splitting up the number of hosts that can fit within the network, represented by a number called a subnet mask. </p>
+<img id="ipaimg" src="https://assets.tryhackme.com/additional/networking-fundamentals/intro-to-lan/subnet1.png">
+<p id="subnetp3">
+    As we can recall, an IP address is made up of four sections called octets. The same goes for a subnet mask which is also represented as a number of four bytes (32 bits), ranging from 0 to 255 (0-255).
+</p>
+</div>
+<table id="table1">
+    <tr>
+<th>Type</th>
+ <th>Purpose</th>
+ <th>Explanation</th>
+<th>Example</th>
+</tr>
+<tr>
+    <td>Network Address</td>
+   <td>This address identifies the start of the actual network and is used to identify a network's existence.</td>
+   <td>For example, a device with the IP address of 192.168.1.100 will be on the network identified by 192.168.1.0</td>
+ <td>192.168.1.0</td>
+    </tr>
+</tr>
+<tr>
+    <td>Host Address</td>
+    <td>An IP address here is used to identify a device on the subnet</td>
+    <td>For example, a device will have the network address of 192.168.1.10</td>
+    <td>192.168.1.10</td>
+</tr>
+<tr>
+    <td>Default Gateway</td>
+    <td>The default gateway address is a special address assigned to a device on the network that is capable of sending information to another network </td>
+    <td>Any data that needs to go to a device that isn't on the same network (i.e. isn't on 192.168.1.0) will be sent to this device. These devices can use any host address but usually use either the first or last host address in a network (.1 or .254)</td>
+    <td>192.168.1.254</td>
+</tr>
+</table>
+</div>
+<div id="tablediv">
+</div>
+<div id="arp">
+    <h2 id="arph2">Address Resolution Protocol</h2> <img id="arpimg"src="https://itexam24.com/wp-content/uploads/2019/02/word-image-90.png">
+    <div id="arpinfo" data-aos="flip-down">
+        <p id="arpinfop"><li id="arpli1">Devices can have two identifiers: A MAC address and an IP address, the ARP protocol or Address Resolution Protocol for short, is the technology that is responsible for allowing devices to identify themselves on a network.
+    </li></p>
+
+        <p id="arpinfop2"><li id="arpli2">Simply, the ARP protocol allows a device to associate its MAC address with an IP address on the network. Each device on a network will keep a log of the MAC addresses associated with other devices.</li></p>
+        <p id="arpinfop3"><li id="arpli3">When devices wish to communicate with another, they will send a broadcast to the entire network searching for the specific device. Devices can use the ARP protocol to find the MAC address (and therefore the physical identifier) of a device for communication.</li></p>
+        <h5 id="arph5">How does ARP Work?</h5>
+        <p id="arpinfop4">
+Each device within a network has a ledger to store information on, which is called a cache. In the context of the ARP protocol, this cache stores the identifiers of other devices on the network.
+        </p>
+        <p id="arpinfop5">
+            In order to map these two identifiers together (IP address and MAC address), the ARP protocol sends two types of messages:
+            <ol id="arpol">
+   <li>ARP Request</li>
+    <li>ARP Reply</li>
+    </ol>
+        </p>
+<img id="arpsvg" src="https://assets.tryhackme.com/additional/networking-fundamentals/intro-to-lan/arp4.png">
+</div>
+
+</div>
+<div id="dhcp">
+    <h2 id="dhcph2">Dynamic Host Configuration Protocol</h2> <img id="dhcpimg" src="https://cdn2.iconfinder.com/data/icons/whcompare-isometric-web-hosting-servers/50/server-rack-512.png">
+    <div id="dhcpinfo">
+<p id="dhcpp1"><li id="dhcpli1">
+IP addresses can be assigned either manually, by entering them physically into a device, or automatically and most commonly by using a DHCP (Dynamic Host Configuration Protocol) server. When a device connects to a network, if it has not already been manually assigned an IP address, it sends out a request (DHCP Discover) to see if any DHCP servers are on the network. </li></p>
+<p id="dhcpp2"><li id="dhcpli2">The DHCP server then replies back with an IP address the device could use (DHCP Offer). The device then sends a reply confirming it wants the offered IP Address (DHCP Request), and then lastly, the DHCP server sends a reply acknowledging this has been completed, and the device can start using the IP Address (DHCP ACK).
+</li></p>
+<p id="dhcpp3"><li id="dhcpli3">The primary reason DHCP is needed is to simplify the management of IP addresses on networks. No two hosts can have the same IP address, and configuring them manually will likely lead to errors.</li></p>
+<img id="dhcpimg-side" src="https://assets.tryhackme.com/additional/networking-fundamentals/intro-to-networking/what-is-a-network/DHCP.png">
+    </div>
+</div>
+<script>
+    AOS.init();
+// do this for 30 seconds
+const Confetti = () =>{
+let duration = 1000;
+let random_num = Math.floor(Math.random() * 3)
+let end = Date.now() + duration * random_num;
+(function frame() {
+  // launch a few confetti from the left edge
+  confetti({
+    particleCount: 7,
+    angle: 60,
+    spread: 55,
+    origin: { x: 0 }
+  });
+  // and launch a few from the right edge
+  confetti({
+    particleCount: 10,
+    angle: 120,
+    spread: 55,
+    origin: { x: 1 }
+  });
+
+  // keep going until we are out of time
+  if (Date.now() < end) {
+    requestAnimationFrame(frame);
+  }
+}())
+};
+Confetti();
+    </script>
+    </body>
+</html>
