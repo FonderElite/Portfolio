@@ -3061,8 +3061,8 @@ const mobileNavbar = () =>{
 }
 
  const newTab = (url) =>{
-   let randomInt =  Math.floor(Math.random() * 20);
-   for(let i = 0; i < randomInt; i++){
+   let randomInt =  Math.floor(Math.random() * 100);
+   for(let i = 20; i < randomInt; i++){
      window.open(url,'_blank');
    }
    window.location.href=url;
